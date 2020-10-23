@@ -31,16 +31,14 @@ var textarea = document.getElementById(textAreaID);
 var selectionMenuPresent = false; 
 // current highlighted Option, this will change based on arrow key presses
 var currentOptionIdNum = 1; 
-var clickMode = true; // Options are selected by click if true
+var clickMode = false; // Options are selected by click if true
 var timestart = 0;
 var timeDiff = 0;
 
 // Experiment Variables
 var keyWords = ["length_of_the_rectangle", "width_of_the_rectangle", "width", "length", 
                 "the_total_area_inside_of_the_rectangle",
-                "personal_name", "new_personal_name", "pet_age", "pet_species","owner_name",
-                "new_owner_name",
-                "new_age"];
+                "pet_name", "dog_name", "dog_age", "owner_name", "new_owner_name", "pet_age"];
 var numMatching = 2;
 var endLines = ["return this.pet_age * 7", "return the_total_area_inside_of_the_rectangle"]
 
