@@ -1,6 +1,4 @@
 /**
- * TODO
- * 
  * Reference: https://codepen.io/shotastage/pen/KaKwya
  * 
  * 
@@ -34,14 +32,17 @@ var selectionMenuPresent = false;
 // current highlighted Option, this will change based on arrow key presses
 var currentOptionIdNum = 1; 
 var clickMode = true; // Options are selected by click if true
+var timestart = 0;
+var timeDiff = 0;
 
 // Experiment Variables
 var keyWords = ["length_of_the_rectangle", "width_of_the_rectangle", "width", "length", 
                 "the_total_area_inside_of_the_rectangle",
-                "personal_name", "pet_age", "pet_species","owner_name",
+                "personal_name", "new_personal_name", "pet_age", "pet_species","owner_name",
                 "new_owner_name",
                 "new_age"];
 var numMatching = 2;
+var endLines = ["this.pet_age = new_age", "return the_total_area_inside_of_the_rectangle"]
 
 /**
  * Function is called every time user types in textarea
@@ -54,6 +55,11 @@ function detectOption() {
  * Detects when selection Menu should be generated and where
  */
 function autocompleteDetection(textarea) {
+  // Set the timer
+  if (timestart == 0) {
+    timestart = Date.now();
+  }
+
   if (selectionMenuPresent) {
     deleteSelectionMenu();
   }
@@ -92,6 +98,14 @@ function autocompleteDetection(textarea) {
                                   content.length, 
                                   content[content.length - 1].length);
     createSelectionMenu(optionWords, cursorPoint.x, cursorPoint.y);
+  }
+
+  // End program at end of line
+  for (var i = 0; i< endLines.length; i++) {
+    if (textarea.value.includes(endLines[i])) {
+      timeDiff = Date.now() - timestart;
+      alert("Your time was: " + timeDiff + "ms");
+    }
   }
 }
 
@@ -287,4 +301,3 @@ document.body.onkeydown = function(e){
     } 
   }
 }
-setUp();
