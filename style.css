@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body{
+  background-Color:#1F2B33;
+  color: #E8F6FE;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.InputArea {
+  position: relative;
+  z-index: 1;
+}
+/*Editor*/
+.Textarea {
+  width: 80%;
+  height: 550px;
+  padding: 11px 35px;
+  background: none;
+  box-sizing: border-box;
+  
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  color: #E8F6FE;
+  border: 2px solid #DB63A6; 
+  border-radius: 4px;
+
+  resize: none;
+  -webkit-appearance: none;
+	-moz-appearance: none;
+  appearance: none;
+
+  background-image: url("images/4.png");
+  background-attachment: local;
+  background-size: 33px;
+  background-repeat: no-repeat;
+}
+.Textarea:focus {
+  border: 3px solid rgb(249, 31, 198);
+}
+::placeholder {
+  color: #A7959F;
+}
+
+/*Button Style*/
+button{
+  background-color: #353A55;
+  padding: 10px;
+  width: 500px; 
+  border: none;
+  color: #E8F6FE;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  text-align: left;
+  outline: none;
+}
+button:hover{
+  background-color: #7b5294;
+  cursor: pointer;
+}
+
+/*Selection Menu*/
+ul {
+  background-color: #353A55;
+  position: absolute;
+  border: 0.5px solid #383941; 
+  width: 500px; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+li {
+  background-color: #353A55;
+  padding: 7px;
+  height: 20px;
+  border: 0.5px solid #6f707b; 
+  border: none;
+  color: #E8F6FE;
+
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  text-align: left;
+
+  outline: none;
+  background: none;
+}
+li:hover{
+  background-color: #7b5294;
+  cursor: pointer;
+}
+
+/* Toggle Switch */
+label{
+  font-size: 18px;
+}
+.toggle { 
+  left: 500px;
+  bottom: 30px;
+  position : relative; 
+  display : inline-block; 
+  width : 100px; 
+  height : 30px; 
+  background-color:rgb(157, 97, 51); 
+  border-radius: 5%; 
+} 
+.toggle:after { 
+  content: ''; 
+  position: absolute; 
+  width: 40px; 
+  height: 26px; 
+  border-radius: 10%; 
+  background-color: rgb(176, 176, 176); 
+  top: 2px;  
+  left: 2px; 
+  transition:  all 0.5s; 
+} 
+.checkbox:checked + .toggle::after { 
+  left : 58px;  
+} 
+.checkbox:checked + .toggle { 
+  background-color:  rgb(90, 130, 165); 
+} 
+.checkbox { 
+  display : none; 
+} 
