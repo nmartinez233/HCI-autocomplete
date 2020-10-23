@@ -105,7 +105,7 @@ label{
   bottom: 30px;
   position : relative; 
   display : inline-block; 
-  width : 100px; 
+  width : 135px; 
   height : 30px; 
   background-color:rgb(157, 97, 51); 
   border-radius: 5%; 
@@ -113,7 +113,7 @@ label{
 .toggle:after { 
   content: ''; 
   position: absolute; 
-  width: 40px; 
+  width: 60px; 
   height: 26px; 
   border-radius: 10%; 
   background-color: rgb(176, 176, 176); 
@@ -122,7 +122,7 @@ label{
   transition:  all 0.5s; 
 } 
 .checkbox:checked + .toggle::after { 
-  left : 58px;  
+  left : 73px;  
 } 
 .checkbox:checked + .toggle { 
   background-color:  rgb(90, 130, 165); 

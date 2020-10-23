@@ -102,7 +102,9 @@ function autocompleteDetection(textarea) {
 
   // End program at end of line
   for (var i = 0; i< endLines.length; i++) {
+    
     if (textarea.value.includes(endLines[i])) {
+      console.log(endLines[i]);
       timeDiff = Date.now() - timestart;
       alert("Your time was: " + timeDiff + "ms");
     }
@@ -242,7 +244,6 @@ function arrowPress(up) {
   }
 }
 
-
 /** 
  * Highlight the option in the selection menu 
  */
@@ -283,17 +284,12 @@ document.body.onkeypress = function(e){
 
 // On keydown
 document.body.onkeydown = function(e){
-  // Prevent arrow keys from scrolling the page
-  /*if([37, 38, 39, 40].indexOf(e.keyCode) > -1) { 
-    e.preventDefault();
-  }*/
 
   if (e.code == "Tab") {
     e.preventDefault();
     addTab(textarea);
   }
   if (selectionMenuPresent && !clickMode) {
-    
     if(e.code == "ArrowDown"){
       arrowPress(false);
     } else if (e.code == "ArrowUp") {
