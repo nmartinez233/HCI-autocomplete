@@ -54,8 +54,9 @@ function detectOption() {
  */
 function autocompleteDetection(textarea) {
   // Set the timer
-  if (timestart == 0) {
+  if (timestart == 0 && textarea.value.length > 0) {
     timestart = Date.now();
+    console.log("Timer started: " + timestart)
   }
 
   if (selectionMenuPresent) {
@@ -101,8 +102,8 @@ function autocompleteDetection(textarea) {
   // End program at end of line
   for (var i = 0; i< endLines.length; i++) {
     if (textarea.value.includes(endLines[i])) {
-      console.log(endLines[i]);
       timeDiff = Date.now() - timestart;
+      console.log("Timer Diff: "+timeDiff);
       alert("Your time was: " + timeDiff + "ms");
     }
   }
