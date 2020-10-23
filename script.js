@@ -42,7 +42,7 @@ var keyWords = ["length_of_the_rectangle", "width_of_the_rectangle", "width", "l
                 "new_owner_name",
                 "new_age"];
 var numMatching = 2;
-var endLines = ["this.pet_age = new_age", "return the_total_area_inside_of_the_rectangle"]
+var endLines = ["return this.pet_age * 7", "return the_total_area_inside_of_the_rectangle"]
 
 /**
  * Function is called every time user types in textarea

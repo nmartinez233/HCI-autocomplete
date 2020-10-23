@@ -10,6 +10,7 @@ body{
 img{
   float:left;
   margin-left:150px;
+  margin-bottom: 10px;
 }
 
 .InputArea {
