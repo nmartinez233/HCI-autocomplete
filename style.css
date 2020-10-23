@@ -7,6 +7,10 @@ body{
   text-align: center;
   font-family: 'Source Code Pro', monospace;
 }
+img{
+  float:left;
+  margin-left:150px;
+}
 
 .InputArea {
   position: relative;
@@ -45,14 +49,15 @@ body{
 
 /*Button Style*/
 button{
+  margin-top: 20px;
   background-color: #353A55;
   padding: 10px;
-  width: 500px; 
+  width: 200px; 
   border: none;
   color: #E8F6FE;
   font-family: 'Source Code Pro', monospace;
   font-size: 16px;
-  text-align: left;
+  text-align: center;
   outline: none;
 }
 button:hover{
@@ -96,7 +101,7 @@ label{
   font-size: 18px;
 }
 .toggle { 
-  left: 500px;
+  left: 50px;
   bottom: 30px;
   position : relative; 
   display : inline-block; 
